@@ -361,7 +361,7 @@
     </section>
     <asp:LinkButton ID="lnkLogin" runat="server"></asp:LinkButton>
     <asp:ModalPopupExtender ID="modalLogin" runat="server" DynamicServicePath="" BackgroundCssClass="modalBackground"
-        Enabled="True" TargetControlID="lnkLogin" PopupControlID="PanelLogin">
+        Enabled="True" TargetControlID="lnkLogin" PopupControlID="PanelLogin" CancelControlID="imgcancelLogin">
     </asp:ModalPopupExtender>
     <div class="container">
         <div class="row">
@@ -369,9 +369,18 @@
             <asp:Panel ID="PanelLogin" runat="server" CssClass="col-lg-6 col-sm-12 menuUser">
                 <div>
                     <br />
-                    <h3 class="text-center">
-                        <asp:Label ID="lblLoginHead" runat="server" Text="Login"></asp:Label>
-                    </h3>
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <h3 class="text-center">
+                                    <asp:Label ID="lblLoginHead" runat="server" Text="Login" CssClass="text-white"></asp:Label>
+                                </h3>
+                            </td>
+                            <td class="text-right">
+                                <asp:Image ID="imgcancelLogin" runat="server" ImageUrl="~/assets/images/cancel.png" />
+                            </td>
+                        </tr>
+                    </table>
                     <hr />
                     <div class="form-group">
                         <asp:Label ID="lblMAIL" runat="server" CssClass="form-control form-control-lg"></asp:Label>

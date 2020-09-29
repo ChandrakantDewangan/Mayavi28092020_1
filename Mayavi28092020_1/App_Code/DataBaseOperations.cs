@@ -185,6 +185,37 @@ public class DataBaseOperations
         }
         return AffectedRow;
     }
+    public int InsertDevices(string UID, string DEVICE_NAME)
+    {
+        int AffectedRow = 0;
+        try
+        {
+            string DEVICE_ID = null;
+            string HOST_NAME = string.Empty;
+            MD5Encryption md5 = new MD5Encryption();
+            string DEVICE_KYE = md5.Encryption(DateTime.Now.ToString("yyyyMMddHHmmssfff"));
+            string CONNECTION_STATUS = "N";
+            string TXRX_LIMIT = "0";
+            string BANDWIDTH = "100";
+            string USER_NAME = "";
+            Query = @"INSERT INTO DEVICES(UID,DEVICE_NAME,HOST_NAME,DEVICE_ID,DEVICE_KYE,CONNECTION_STATUS,TXRX_LIMIT,BANDWIDTH,UPTIME,USER_NAME) VALUES(@UID,@DEVICE_NAME,@HOST_NAME,@DEVICE_ID,@DEVICE_KYE,@CONNECTION_STATUS,@TXRX_LIMIT,@BANDWIDTH,NOW(),@USER_NAME)";
+            AffectedRow = db.ExecuteInsert(Query,
+                new MySqlParameter("@UID", UID),
+                new MySqlParameter("@DEVICE_NAME", DEVICE_NAME),
+                new MySqlParameter("@HOST_NAME", HOST_NAME),
+                new MySqlParameter("@DEVICE_ID", DEVICE_ID),
+                new MySqlParameter("@DEVICE_KYE", DEVICE_KYE),
+                new MySqlParameter("@CONNECTION_STATUS", CONNECTION_STATUS),
+                new MySqlParameter("@TXRX_LIMIT", TXRX_LIMIT),
+                new MySqlParameter("@BANDWIDTH", BANDWIDTH),
+                new MySqlParameter("@USER_NAME", USER_NAME));
+        }
+        catch
+        {
+            AffectedRow = 0;
+        }
+        return AffectedRow;
+    }
     public int UpdateDevices(string UID, string DEVICE_NAME, string HOST_NAME, string DEVICE_ID, string DEVICE_KYE, string CONNECTION_STATUS, string TXRX_LIMIT, string BANDWIDTH, string UPTIME, string USER_NAME, string DID)
     {
         int AffectedRow = 0;
@@ -201,6 +232,22 @@ public class DataBaseOperations
                 new MySqlParameter("@TXRX_LIMIT", TXRX_LIMIT),
                 new MySqlParameter("@BANDWIDTH", BANDWIDTH),
                 new MySqlParameter("@USER_NAME", USER_NAME),
+                new MySqlParameter("@DID", DID));
+        }
+        catch
+        {
+            AffectedRow = 0;
+        }
+        return AffectedRow;
+    }
+    public int UpdateDevices(string DID, string DEVICE_NAME)
+    {
+        int AffectedRow = 0;
+        try
+        {
+            Query = @"UPDATE DEVICES SET DEVICE_NAME=@DEVICE_NAME WHERE DID=@DID";
+            AffectedRow = db.ExecuteUpdate(Query,
+                new MySqlParameter("@DEVICE_NAME", DEVICE_NAME),
                 new MySqlParameter("@DID", DID));
         }
         catch
