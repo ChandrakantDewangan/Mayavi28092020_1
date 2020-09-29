@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageReg.master.cs" Inherits="MasterPageReg" %>
 
 <!DOCTYPE html>
 
@@ -18,7 +18,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div id="preloader">
             <div class="jumper">
                 <div></div>
@@ -26,13 +25,13 @@
                 <div></div>
             </div>
         </div>
-        <header class="header-area header-sticky">
+        <header class="header-area header-sticky menuUser">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <nav class="main-nav">
                             <!-- ***** Logo Start ***** -->
-                            <a href="#" class="logo">mayavi Port</a>
+                            <a href="#" class="logo">Art Factory</a>
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
@@ -96,6 +95,5 @@
     <script src="assets/js/jquery.counterup.min.js"></script>
     <script src="assets/js/imgfix.min.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script src="assets/js/MyMethod.js"></script>
 </body>
 </html>

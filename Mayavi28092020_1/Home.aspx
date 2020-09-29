@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Home" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -8,9 +10,16 @@
             <div class="container">
                 <div class="row">
                     <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                        <h1>Art Factory is free <strong>for YOU</strong></h1>
-                        <p>This template is available for 100% free of charge on TemplateMo. Download, modify and use this for your business website.</p>
-                        <a href="#about" class="main-button-slider">Find Out More</a>
+                        <h1>mayavi<strong>Port</strong></h1>
+                        <p>Exposes local server behind NAT and firewall to other mayaviPort running device or on the cloud.</p>
+                        <div class="input-group mb-3">
+                            <asp:TextBox ID="txtEMAIL" runat="server" CssClass="form-control form-control-lg"
+                                placeholder="e-mail" AutoPostBack="true" OnTextChanged="txtEMAIL_TextChanged"></asp:TextBox>
+                            <div class="input-group-append">
+                                <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-warning btn-lg"
+                                    Text="Login" OnClick="btnLogin_Click" />
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                         <img src="assets/images/slider-icon.png" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic">
@@ -325,17 +334,17 @@
                             <div class="row">
                                 <div class="col-md-6 col-sm-12">
                                     <fieldset>
-                                        <input name="name" type="text" id="name" placeholder="Full Name" required="" class="contact-field">
+                                        <input name="name" type="text" id="name" placeholder="Full Name" class="contact-field">
                                     </fieldset>
                                 </div>
                                 <div class="col-md-6 col-sm-12">
                                     <fieldset>
-                                        <input name="email" type="text" id="email" placeholder="E-mail" required="" class="contact-field">
+                                        <input name="email" type="text" id="email" placeholder="E-mail" class="contact-field">
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <textarea name="message" rows="6" id="message" placeholder="Your Message" required="" class="contact-field"></textarea>
+                                        <textarea name="message" rows="6" id="message" placeholder="Your Message" class="contact-field"></textarea>
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
@@ -347,9 +356,49 @@
                         </div>
                     </div>
                 </div>
-                <!-- ***** Contact Form End ***** -->
             </div>
         </div>
     </section>
+    <asp:LinkButton ID="lnkLogin" runat="server"></asp:LinkButton>
+    <asp:ModalPopupExtender ID="modalLogin" runat="server" DynamicServicePath="" BackgroundCssClass="modalBackground"
+        Enabled="True" TargetControlID="lnkLogin" PopupControlID="PanelLogin">
+    </asp:ModalPopupExtender>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-12"></div>
+            <asp:Panel ID="PanelLogin" runat="server" CssClass="col-lg-6 col-sm-12 menuUser">
+                <div>
+                    <br />
+                    <h3 class="text-center">
+                        <asp:Label ID="lblLoginHead" runat="server" Text="Login"></asp:Label>
+                    </h3>
+                    <hr />
+                    <div class="form-group">
+                        <asp:Label ID="lblMAIL" runat="server" CssClass="form-control form-control-lg"></asp:Label>
+                    </div>
+                    <div class="form-group">
+                        <asp:TextBox ID="txtUSER_NAME" runat="server" CssClass="form-control form-control-lg"
+                            placeholder="Full name" Enabled="false"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:TextBox ID="txtPWD" runat="server" CssClass="form-control form-control-lg text-Submit"
+                            TextMode="Password" placeholder="Password"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:TextBox ID="txtConfirm" runat="server" CssClass="form-control form-control-lg"
+                            TextMode="Password" placeholder="Confirm Password" Visible="false"></asp:TextBox>
+                    </div>
+                    <div class="text-right">
+                        <asp:Button ID="btnSubmit" runat="server" CssClass="btn btn-warning btn-lg btn-Submit" Text="SignUp"
+                            OnClick="btnSubmit_Click" />
+                    </div>
+                    <br />
+                    <asp:Label ID="lblMessage" runat="server" ForeColor="#990033"></asp:Label>
+                    <br />
+                </div>
+            </asp:Panel>
+            <div class="col-lg-3 col-sm-12"></div>
+        </div>
+    </div>
 </asp:Content>
 
