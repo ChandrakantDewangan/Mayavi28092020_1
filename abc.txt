@@ -1,0 +1,41 @@
+CHANDRAKANT DEWANGAN
+​Senior Full-Stack Engineer
+​Email: dewangan.chandrakant@gmail.com
+​Phone: +91 9752840707
+​Location: Raipur, Chhattisgarh, India
+​GitHub: github.com/ChandrakantDewangan
+​LinkedIn: linkedin.com/in/chandrakant-dewangan
+​SUMMARY
+​Accomplished Senior Full-Stack Engineer with over 10 years of experience in designing and delivering cloud-native web applications and AI-driven solutions across pharmaceutical and government sectors. Expertise in the Software Development Life Cycle (SDLC), building scalable applications with React.js, Angular, Node.js, and ASP.NET Core. Proven experience in developing Generative AI solutions with LangChain and OpenAI GPT-4, focusing on conversational AI and workflow automation.
+​SKILLS
+​Frontend: React.js, Next.js, Angular, TypeScript, JavaScript (ES6+), HTML5, CSS
+​Backend / APIs: Node.js, ASP.NET Core, FastAPI, REST APIs, Microservices
+​Auth & Security: OKTA SSO, RBAC, JWT, Secure Software
+​AI & Generative AI: OpenAI GPT-4, LangChain, Prompt Engineering, AI Chatbot Development, AI Workflow Automation
+​Databases: PostgreSQL, Oracle, MySQL, SQL Server
+​DevOps & Tools: AWS S3, Docker, GitLab CI/CD, VS Code, Postman, Git/GitHub, EKS Clusters
+​AI Developer Tools: Cursor, GitHub Copilot, Antigravity
+​EXPERIENCE
+​Tata Consultancy Services (TCS)
+​Assistant Consultant (Senior Full-Stack Engineer)
+07/2022 – Present
+Client: Amgen (Global Pharmaceutical)
+​Developed AI-powered enterprise applications using React, Angular, Node.js, ASP.NET Core, FastAPI, LangChain, LangGraph, and GPT-4o, enhancing conversational analytics, supply chain planning, and reporting automation.
+​Built scalable dashboards and REST APIs, creating reusable components with AG-Grid, Tableau, PostgreSQL, Databricks, and WebSockets to enhance performance and user experience.
+​Implemented OKTA SSO, RBAC, Docker, Terraform, GitLab CI/CD, Jenkins, and Amazon EKS, ensuring secure, scalable, and automated deployments.
+​Collaborated with global stakeholders throughout the SDLC, delivering high-quality solutions using Agile practices while mentoring junior developers.
+​National Informatics Centre (NIC)
+​Software Application Support Engineer
+10/2016 – 06/2022
+​Developed and maintained enterprise e-Governance applications such as Pension Management, eCR, CG Tax Portal, and Audit Management System using ASP.NET, Angular, Node.js, Oracle, and PostgreSQL to enhance service delivery.
+​Built secure workflow automation, document management, digital signature, grievance handling, and banking/compliance integrations for government departments across 28 districts, improving process efficiency.
+​Optimized Oracle SQL, stored procedures, and REST APIs while supporting complete SDLC activities, enhancing collaboration among stakeholders during development, deployment, and production support.
+​EDUCATION
+​Chhattisgarh Swami Vivekanand Technical University (CSVTU), Bhilai
+Bachelor of Engineering (B.E.) in Electronics & Telecommunication Engineering
+2010 – 2014 | Raipur
+​ADDITIONAL DETAILS
+​Languages: English, Hindi
+​Notice Period: Serving notice period (Last Working Day: 29 September 2026)
+​Date of Birth: 15 April 1991
+​Preferences: Actively Seeking Remote Roles
